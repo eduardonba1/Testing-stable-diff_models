@@ -1,5 +1,7 @@
 import os
 # os.system(f"pip install accelerate==0.23.0") 
+os.system(f"sudo apt update")
+os.system(f"apt install libvulkan1")
 os.system(f"apt search nvidia-driver")
 # os.system(f"sudo apt install nvidia-driver-535 nvidia-dkms-535 -y")
 os.system(f"apt install nvidia-driver-535-server nvidia-dkms-535-server -y")
