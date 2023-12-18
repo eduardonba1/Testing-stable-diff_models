@@ -34,7 +34,7 @@
         "0": "dark magician girl, mksks style, (very detailed background:1.0), (highly detailed background:1.0), masterpiece, best quality, (1girl), solo, (forest), long hair, blonde hair, blue headwear, wizard hat, spell casting, nature, trees:1.2, motion blur, magic, (moonlight:1.2), chromatic aberration, depth of field, soft lighting, highly detailed face, highly detailed eyes , detailed faces, highly detailed, intricate, ultra hd, sharp photo, crepuscular rays, in focus<lora:dark_magician_girl_offset:0.65>"
     },
     "animation_prompts_positive": "",
-    "animation_prompts_negative": "naked, nude, logo, cropped, two heads, four arms, lazy eye, blurry, unfocused, smoke, fog, lowres, (bad anatomy:1.2), EasyNegative, multiple views, six fingers, black & white, monochrome, (bad hands:1.2), (text:1.2), error, cropped, worst quality, low quality, normal quality, jpeg artifacts, (signature:1.2), (watermark:1.3), username, blurry, out of focus, amateur drawing, shading, displaced feet, out of frame, ((ugly)), nsfw, disfigured, mutant, bad-hands-5",
+    "animation_prompts_negative": "naked, nude, bad-hands-5, logo, cropped, two heads, four arms, lazy eye, blurry, unfocused, smoke, fog, lowres, (bad anatomy:1.2), EasyNegative, multiple views, six fingers, black & white, monochrome, (bad hands:1.2), (text:1.2), error, cropped, worst quality, low quality, normal quality, jpeg artifacts, (signature:1.2), (watermark:1.3), username, blurry, out of focus, amateur drawing, shading, displaced feet, out of frame, ((ugly)), nsfw, disfigured, mutant, bad-hands-5",
     "animation_mode": "3D",
     "max_frames": 120,
     "border": "wrap",
