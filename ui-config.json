@@ -2,7 +2,7 @@
     "txt2img/Prompt/visible": true,
     "txt2img/Prompt/value": "",
     "txt2img/Negative prompt/visible": true,
-    "txt2img/Negative prompt/value": "naked, nude, logo, cropped, two heads, four arms, lazy eye, blurry, unfocused, smoke, fog, lowres, (bad anatomy:1.2), EasyNegative, multiple views, six fingers, black & white, monochrome, (bad hands:1.2), (text:1.2), error, cropped, worst quality, low quality, normal quality, jpeg artifacts, (signature:1.2), (watermark:1.3), username, blurry, out of focus, amateur drawing, colored, shading, displaced feet, out of frame, massive breasts, large breasts, ((ugly)), nsfw, disfigured, mutant, (bad hands:1.2), bad-hands-5",
+    "txt2img/Negative prompt/value": "naked, nude, bad-hands-5, logo, cropped, two heads, four arms, lazy eye, blurry, unfocused, smoke, fog, lowres, (bad anatomy:1.2), EasyNegative, multiple views, six fingers, black & white, monochrome, (bad hands:1.2), (text:1.2), error, cropped, worst quality, low quality, normal quality, jpeg artifacts, (signature:1.2), (watermark:1.3), username, blurry, out of focus, amateur drawing, colored, shading, displaced feet, out of frame, massive breasts, large breasts, ((ugly)), nsfw, disfigured, mutant, (bad hands:1.2), bad-hands-5",
     "txt2img/Interrupt/visible": true,
     "txt2img/Skip/visible": true,
     "txt2img/Generate/visible": true,
