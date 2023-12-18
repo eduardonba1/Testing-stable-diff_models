@@ -99,12 +99,12 @@
     "sdxl_crop_left": 0,
     "sdxl_refiner_low_aesthetic_score": 2.5,
     "sdxl_refiner_high_aesthetic_score": 6.0,
-    "cross_attention_optimization": "Automatic",
+    "cross_attention_optimization": "sdp-no-mem - scaled dot product without memory efficient attention",
     "s_min_uncond": 0.0,
     "token_merging_ratio": 0.0,
     "token_merging_ratio_img2img": 0.0,
     "token_merging_ratio_hr": 0.0,
-    "pad_cond_uncond": false,
+    "pad_cond_uncond": true,
     "experimental_persistent_cond_cache": false,
     "use_old_emphasis_implementation": false,
     "use_old_karras_scheduler_sigmas": false,
@@ -162,7 +162,9 @@
         "sd_vae",
         "initial_noise_multiplier"],
     "ui_tab_order": [],
-    "hidden_tabs": ["Train"],
+    "hidden_tabs": [
+        "Train",
+        "Checkpoint Merger"],
     "ui_reorder_list": [],
     "hires_fix_show_sampler": false,
     "hires_fix_show_prompts": false,
@@ -216,7 +218,7 @@
     "sd_lora": "None",
     "lora_preferred_name": "Alias from file",
     "lora_add_hashes_to_infotext": true,
-    "lora_show_all": false,
+    "lora_show_all": true,
     "lora_hide_unknown_for_versions": [],
     "extra_options": [],
     "extra_options_accordion": false,
@@ -230,5 +232,7 @@
     "canvas_blur_prompt": false,
     "canvas_disabled_functions": [
         "Overlap"
-    ]
+    ],
+    "sd_checkpoints_keep_in_cpu": false,
+    "control_net_unit_count": 6
 }
