@@ -7,13 +7,13 @@ os.system(f"#pip install -q xformers==0.0.19 triton==2.0.0 -U")
 os.system(f"pip install -q mediapipe==0.9.1.0 addict yapf fvcore omegaconf")
 
 os.system(f"git clone https://github.com/comfyanonymous/ComfyUI")
-%cd /home/xlab-app-center/ComfyUI
+os.system(f"%cd /home/xlab-app-center/ComfyUI")
 os.system(f"pip install -q -r requirements.txt")
 os.system(f"git reset --hard")
 os.system(f"git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors /home/xlab-app-center/ComfyUI/custom_nodes/comfy_controlnet_preprocessors")
-%cd /home/xlab-app-center/ComfyUI/custom_nodes/comfy_controlnet_preprocessors
+os.system(f"%cd /home/xlab-app-center/ComfyUI/custom_nodes/comfy_controlnet_preprocessors")
 os.system(f"python install.py --no_download_ckpts")
-%cd /home/xlab-app-center/ComfyUI
+os.system(f"%cd /home/xlab-app-center/ComfyUI")
 
 os.system(f"wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -O /home/xlab-app-center/cloudflared-linux-amd64 && chmod 777 /home/xlab-app-center/cloudflared-linux-amd64")
 os.system(f"import atexit, requests, subprocess, time, re, os
