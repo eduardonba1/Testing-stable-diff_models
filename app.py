@@ -2,8 +2,8 @@ import os
 
 !apt -y update -qq
 !apt -y install -qq aria2
-!pip install -q torch==2.0.0+cu118 torchvision==0.15.1+cu118 torchaudio==2.0.1+cu118 torchtext==0.15.1 torchdata==0.6.0 --extra-index-url https://download.pytorch.org/whl/cu118 -U
-!pip install -q xformers==0.0.19 triton==2.0.0 -U
+#!pip install -q torch==2.0.0+cu118 torchvision==0.15.1+cu118 torchaudio==2.0.1+cu118 torchtext==0.15.1 torchdata==0.6.0 --extra-index-url https://download.pytorch.org/whl/cu118 -U
+#!pip install -q xformers==0.0.19 triton==2.0.0 -U
 !pip install -q mediapipe==0.9.1.0 addict yapf fvcore omegaconf
 
 !git clone https://github.com/comfyanonymous/ComfyUI
