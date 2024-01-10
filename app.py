@@ -16,30 +16,30 @@ os.system(f"python install.py --no_download_ckpts")
 os.system(f"%cd /home/xlab-app-center/ComfyUI")
 
 os.system(f"wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -O /home/xlab-app-center/cloudflared-linux-amd64 && chmod 777 /home/xlab-app-center/cloudflared-linux-amd64")
-os.system(f"import atexit, requests, subprocess, time, re, os
-from random import randint
-from threading import Timer
-from queue import Queue
-def cloudflared(port, metrics_port, output_queue):
-    atexit.register(lambda p: p.terminate(), subprocess.Popen(['/home/xlab-app-center/cloudflared-linux-amd64', 'tunnel', '--url', f'http://127.0.0.1:{port}', '--metrics', f'127.0.0.1:{metrics_port}'], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT))
-    attempts, tunnel_url = 0, None
-    while attempts < 10 and not tunnel_url:
-        attempts += 1
-        time.sleep(3)
-        try:
-            tunnel_url = re.search("(?P<url>https?:\/\/[^\s]+.trycloudflare.com)", requests.get(f'http://127.0.0.1:{metrics_port}/metrics').text).group("url")
-        except:
-            pass
-    if not tunnel_url:
-        raise Exception("Can't connect to Cloudflare Edge")
-    output_queue.put(tunnel_url)
-output_queue, metrics_port = Queue(), randint(8100, 9000)
-thread = Timer(2, cloudflared, args=(8188, metrics_port, output_queue))
-thread.start()
-thread.join()
-tunnel_url = output_queue.get()
+os.system(f"import atexit, requests, subprocess, time, re, os")
+os.system(f"from random import randint")
+os.system(f"from threading import Timer")
+os.system(f"from queue import Queue")
+os.system(f"def cloudflared(port, metrics_port, output_queue):")
+    os.system(f"atexit.register(lambda p: p.terminate(), subprocess.Popen(['/home/xlab-app-center/cloudflared-linux-amd64', 'tunnel', '--url', f'http://127.0.0.1:{port}', '--metrics', f'127.0.0.1:{metrics_port}'], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT))")
+    os.system(f"attempts, tunnel_url = 0, None")
+    os.system(f"while attempts < 10 and not tunnel_url:")
+        os.system(f"attempts += 1")
+        os.system(f"time.sleep(3)")
+        os.system(f"try:")
+            os.system(f"tunnel_url = re.search("(?P<url>https?:\/\/[^\s]+.trycloudflare.com)", requests.get(f'http://127.0.0.1:{metrics_port}/metrics').text).group("url")")
+        os.system(f"except:")
+            os.system(f"pass")
+    os.system(f"if not tunnel_url:")
+        os.system(f"raise Exception("Can't connect to Cloudflare Edge")")
+    os.system(f"output_queue.put(tunnel_url)")
+os.system(f"output_queue, metrics_port = Queue(), randint(8100, 9000)")
+os.system(f"thread = Timer(2, cloudflared, args=(8188, metrics_port, output_queue))")
+os.system(f"thread.start()")
+os.system(f"thread.join()")
+os.system(f"tunnel_url = output_queue.get()")
 os.environ['webui_url'] = tunnel_url
-print(tunnel_url)")
+os.system(f"print(tunnel_url)")
 
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_ip2p_fp16.safetensors -d /home/xlab-app-center/ComfyUI/models/controlnet -o control_v11e_sd15_ip2p_fp16.safetensors")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_shuffle_fp16.safetensors -d /home/xlab-app-center/ComfyUI/models/controlnet -o control_v11e_sd15_shuffle_fp16.safetensors")
