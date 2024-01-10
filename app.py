@@ -64,4 +64,4 @@ os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://github
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/anything-v4.0/resolve/main/anything-v4.5-pruned.ckpt -d /home/xlab-app-center/ComfyUI/models/checkpoints -o anything-v4.5-pruned.ckpt")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/anything-v4.0/resolve/main/anything-v4.0.vae.pt -d /home/xlab-app-center/ComfyUI/models/vae -o anything-v4.5-pruned.vae.pt")
 
-os.system(f"python main.py --dont-print-server")
+os.system(f"python main.py")
