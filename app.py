@@ -16,8 +16,8 @@ os.chdir(f"/home/xlab-app-center/ComfyUI/custom_nodes/comfy_controlnet_preproces
 os.system(f"python install.py --no_download_ckpts")
 os.chdir(f"/home/xlab-app-center/ComfyUI")
 
-os.system(f"wget https://github.com/eduardonba1/Testing-stable-diff_models/raw/comfyuitest/app2.py -O /home/xlab-app-center/ComfyUI/app2.py")
-os.system(f"python app2.py")
+#os.system(f"wget https://github.com/eduardonba1/Testing-stable-diff_models/raw/comfyuitest/app2.py -O /home/xlab-app-center/ComfyUI/app2.py")
+#os.system(f"python app2.py")
 
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_ip2p_fp16.safetensors -d /home/xlab-app-center/ComfyUI/models/controlnet -o control_v11e_sd15_ip2p_fp16.safetensors")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_shuffle_fp16.safetensors -d /home/xlab-app-center/ComfyUI/models/controlnet -o control_v11e_sd15_shuffle_fp16.safetensors")
@@ -65,4 +65,4 @@ os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://github
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/anything-v4.0/resolve/main/anything-v4.5-pruned.ckpt -d /home/xlab-app-center/ComfyUI/models/checkpoints -o anything-v4.5-pruned.ckpt")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/anything-v4.0/resolve/main/anything-v4.0.vae.pt -d /home/xlab-app-center/ComfyUI/models/vae -o anything-v4.5-pruned.vae.pt")
 
-os.system(f"python main.py")
+os.system(f"python main.py --dont-print-server --port 7860 --enable-cors-header")
