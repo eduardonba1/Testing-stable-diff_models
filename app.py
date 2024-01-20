@@ -14,6 +14,7 @@ os.system(f"git reset --hard")
 os.system(f"git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors /home/xlab-app-center/ComfyUI/custom_nodes/comfy_controlnet_preprocessors")
 os.chdir(f"/home/xlab-app-center/ComfyUI/custom_nodes/comfy_controlnet_preprocessors")
 os.system(f"python install.py --no_download_ckpts")
+os.system(f"git clone https://github.com/ltdrdata/ComfyUI-Manager /home/xlab-app-center/ComfyUI/custom_nodes/ComfyUI-Manager")
 os.chdir(f"/home/xlab-app-center/ComfyUI")
 
 #os.system(f"wget https://github.com/eduardonba1/Testing-stable-diff_models/raw/comfyuitest/app2.py -O /home/xlab-app-center/ComfyUI/app2.py")
